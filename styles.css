@@ -1,0 +1,39 @@
+/* Reset and base styles */
+body {
+  background-color: #ff0000; /* Vivid red as requested */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+/* Container for the column layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between images */
+  padding: 10px;
+  width: 100%;
+  max-width: 95%; /* Increased for mobile view */
+}
+
+/* Responsive image styles */
+.gallery-image {
+  width: 100%; /* Takes full width of the container */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes bottom whitespace */
+  border-radius: 8px; /* Slight rounding for aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for larger tablets/desktops if needed, 
+   but the percent width handles mobile/tablet well by default. */
+@media (min-width: 768px) {
+  .container {
+    max-width: 80%; /* Constraint for larger screens as requested */
+    padding: 40px;
+  }
+}
