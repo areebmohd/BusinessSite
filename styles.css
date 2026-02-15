@@ -4,9 +4,11 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   font-family: sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Container for the column layout */
@@ -16,8 +18,62 @@ body {
   align-items: center;
   gap: 20px; /* Space between images */
   padding: 10px;
+  padding-bottom: 120px; /* Prevent content from being hidden behind fixed links */
   width: 100%;
   max-width: 95%; /* Increased for mobile view */
+  margin: auto; /* Push content to center vertically */
+}
+
+/* Links Section Styles with Glassmorphism */
+.links {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: max-content;
+  max-width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links a {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+}
+
+.links a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.links a:hover {
+  opacity: 0.8;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Responsive image styles */
@@ -35,5 +91,26 @@ body {
   .container {
     max-width: 80%; /* Constraint for larger screens as requested */
     padding: 40px;
+  }
+}
+
+/* Mobile adjustments for links */
+@media (max-width: 600px) {
+  .container {
+    padding-bottom: 80px;
+  }
+  .links {
+    padding: 8px 10px;
+    bottom: 12px;
+    width: auto;
+    max-width: 98%;
+    flex-wrap: nowrap; /* Force single row */
+    gap: 5px;
+  }
+
+  .links a {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+    white-space: nowrap;
   }
 }
