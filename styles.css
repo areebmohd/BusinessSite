@@ -33,12 +33,12 @@ body {
   transform: translateX(-50%);
   display: flex;
   padding: 12px 20px;
-  /* Dark glass effect for better contrast on white backgrounds */
-  background: rgba(0, 0, 0, 0.6);
+  /* Glass effect for better contrast */
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   z-index: 1000;
   width: max-content;
