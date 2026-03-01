@@ -4,17 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ashu Websites</title>
+    <meta
+      name="description"
+      content="Professional web development services by Ashu Websites. We create responsive, high-performance, and SEO-friendly websites tailored to your business needs."
+    />
+    <link rel="canonical" href="https://ashuwebsites.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ashuwebsites.com/" />
+    <meta
+      property="og:title"
+      content="Ashu Websites - Expert Web Development Services"
+    />
+    <meta
+      property="og:description"
+      content="Professional web development services by Ashu Websites. We create responsive, high-performance, and SEO-friendly websites."
+    />
+    <meta property="og:image" content="https://ashuwebsites.com/ASTIcon.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ashuwebsites.com/" />
+    <meta
+      property="twitter:title"
+      content="Ashu Websites - Expert Web Development Services"
+    />
+    <meta
+      property="twitter:description"
+      content="Professional web development services by Ashu Websites. We create responsive, high-performance, and SEO-friendly websites."
+    />
+    <meta
+      property="twitter:image"
+      content="https://ashuwebsites.com/ASTIcon.png"
+    />
+
     <link rel="icon" type="image/png" href="ASTIcon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <img src="1.png" alt="Image 1" class="gallery-image" />
-      <img src="2.png" alt="Image 2" class="gallery-image" />
-      <img src="3.png" alt="Image 3" class="gallery-image" />
-    </div>
-    <div class="links">
-      <a href="https://wa.me/917534846938" target="_blank">Contact Now</a>
-    </div>
+    <header style="display: none">
+      <h1>Ashu Websites</h1>
+      <p>Building Digital Excellence</p>
+    </header>
+
+    <main>
+      <section class="gallery" aria-label="Portfolio Gallery">
+        <div class="container">
+          <img
+            src="1.png"
+            alt="About us and contact us image"
+            class="gallery-image"
+          />
+          <img
+            src="2.png"
+            alt="website packages image"
+            class="gallery-image"
+          />
+          <img
+            src="3.png"
+            alt="screenshots image"
+            class="gallery-image"
+          />
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="links">
+          <a
+            href="https://wa.me/917534846938"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Contact Now</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Ashu Websites",
+        "image": "https://ashuwebsites.vercel.app/ASTIcon.png",
+        "url": "https://ashuwebsites.vercel.app/",
+        "telephone": "+917534846938",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "description": "Professional web development services specializing in responsive and SEO-friendly websites."
+      }
+    </script>
   </body>
 </html>
